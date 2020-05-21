@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
+import GetItem from './getItem';
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      login: 'Robi Hamdani',
-      bio:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo adipisci, excepturi nesciunt eius delectus dolore deleniti a fuga ut! At.',
-    };
-  }
+  state = {
+    users: [
+      {
+        id: 1,
+        login: 'mojombo',
+        bio:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas possimus eligendi, autem voluptatibus quo provident natus unde consequatur optio consequuntur.',
+      },
+      {
+        id: 2,
+        login: 'defunkt',
+        bio:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas possimus eligendi, autem voluptatibus quo provident natus unde consequatur optio consequuntur.',
+      },
+      {
+        id: 3,
+        login: 'pjhyett',
+        bio:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas possimus eligendi, autem voluptatibus quo provident natus unde consequatur optio consequuntur.',
+      },
+    ],
+  };
   render() {
     return (
       <div>
-        <h1>ini adalah state</h1>
-        <p>Nama : {this.state.login}</p>
-        <p>bio: {this.state.bio}</p>
+        {this.state.users.map((user) => (
+          <GetItem key={user.id} user={user} />
+        ))}
       </div>
     );
   }
