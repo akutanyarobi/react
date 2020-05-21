@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import GetItem from './getItem';
+import GetItem from './GetItem';
+import undrawLanding from '../assets/undraw-landing.png';
+import { Row, Col, Button } from 'react-bootstrap';
 
 class Profile extends Component {
   state = {
@@ -27,6 +29,29 @@ class Profile extends Component {
   render() {
     return (
       <div>
+        <Row>
+          <div className="bg-img">
+            <Row>
+              <Col sm={7}>
+                <div className="landing-text">
+                  <h1>Oh Hai!</h1>
+                  <h2 className="text-muted mt-4">
+                    Halo nama saya {this.state.login} seorang developer dan
+                    pekerja keras
+                  </h2>
+                  <Button variant="primary" className="mt-2">
+                    Kontak Saya
+                  </Button>
+                </div>
+              </Col>
+              <Col sm={4}>
+                <div className="undraw-img">
+                  <img src={undrawLanding} alt="undraw-cartoon" />
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </Row>
         {this.state.users.map((user) => (
           <GetItem key={user.id} user={user} />
         ))}
