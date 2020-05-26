@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Profile from './components/page/Profile';
+import NotFound from './components/page/NotFound';
 import Footer from './components/layout/Footer';
 import NavigationBar from './components/layout/NavigationBar';
 import { Container } from 'react-bootstrap';
@@ -14,6 +15,7 @@ function App() {
       <Container>
         <Switch>
           <Route exact path="/" component={Profile} />
+          <Route component={NotFound} />
         </Switch>
       </Container>
       <Footer />

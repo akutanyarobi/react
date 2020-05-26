@@ -11,7 +11,7 @@ class Profile extends Component {
         nama_projek: 'GUI Tkinter',
         bio:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas possimus eligendi, autem voluptatibus quo provident natus unde consequatur optio consequuntur.',
-        code_branch: 20,
+        code_branch: 19,
         code_star: 60,
       },
       {
