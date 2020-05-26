@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .bg-img {
   width: 100vw;
   height: 45vh;
@@ -6,4 +12,22 @@
 .undraw-img img {
   width: 130%;
   height: 130%;
+}
+
+.landing-text {
+  padding-top: 10%;
+}
+
+.landing-card {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.card {
+  width: '21rem';
+}
+
+.card:hover {
+  border: 1px solid #007bff;
+  cursor: pointer;
 }

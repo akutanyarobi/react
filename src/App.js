@@ -4,17 +4,20 @@ import Profile from './components/page/Profile';
 import Footer from './components/layout/Footer';
 import NavigationBar from './components/layout/NavigationBar';
 import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <NavigationBar />
       <Container>
-        <Profile />
-        <Footer />
+        <Switch>
+          <Route exact path="/" component={Profile} />
+        </Switch>
       </Container>
-    </div>
+      <Footer />
+    </Router>
   );
 }
 

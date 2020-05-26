@@ -21,11 +21,4 @@ class NavigationBar extends Component {
   }
 }
 
-const customCss = {
-  color: 'white',
-  backgroundColor: 'DodgerBlue',
-  padding: '10px',
-  fontFamily: 'Arial',
-};
-
 export default NavigationBar;
