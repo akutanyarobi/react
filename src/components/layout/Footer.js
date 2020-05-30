@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Footer extends Component {
-  render() {
-    return (
-      <div>
-        <h3 style={customCss}>Footer</h3>
-      </div>
-    );
-  }
-}
+const Footer = () => {
+  return (
+    <div>
+      <h3 style={customCss}>Footer</h3>
+    </div>
+  );
+};
 
 const customCss = {
   color: 'white',

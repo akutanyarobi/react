@@ -8,7 +8,7 @@ import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <NavigationBar />
@@ -21,6 +21,6 @@ function App() {
       <Footer />
     </Router>
   );
-}
+};
 
 export default App;

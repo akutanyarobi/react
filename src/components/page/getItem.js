@@ -30,7 +30,8 @@ class GetItem extends Component {
                     <Card.Title>{repo.name}</Card.Title>
                     <Card.Text>{repo.description}</Card.Text>
                     <Badge variant="light" className="mr-2">
-                      <i className="fas fa-code-branch" /> {repo.forks_count}
+                      <i className="fas fa-code-branch" />
+                      {repo.forks_count}
                     </Badge>
                     <Badge variant="light">
                       <i className="fas fa-star" /> {repo.stargazers_count}
