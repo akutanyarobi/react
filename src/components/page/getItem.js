@@ -15,19 +15,7 @@ const GetItem = () => {
     };
 
     fetchData();
-
-    // async function fetchData() {
-    //   const res = await axios(
-    //     'https://api.github.com/users/iamshaunjp/repos?per_page=6&sort=created:asc'
-    //   );
-
-    //   setRepos(res.data);
-    // }
-
-    // fetchData();
   }, []);
-
-  console.log(repos);
 
   return (
     <div>

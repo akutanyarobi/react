@@ -7,19 +7,22 @@ import NavigationBar from './components/layout/NavigationBar';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import GithubState from './context/github/Githubstate';
 
 const App = () => {
   return (
-    <Router>
-      <NavigationBar />
-      <Container>
-        <Switch>
-          <Route exact path="/" component={Profile} />
-          <Route component={NotFound} />
-        </Switch>
-      </Container>
-      <Footer />
-    </Router>
+    <GithubState>
+      <Router>
+        <NavigationBar />
+        <Container>
+          <Switch>
+            <Route exact path="/" component={Profile} />
+            <Route component={NotFound} />
+          </Switch>
+        </Container>
+        <Footer />
+      </Router>
+    </GithubState>
   );
 };
 
