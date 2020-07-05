@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import GithubContext from '../../context/github/GithubContext';
 import { Card, Badge, Row, Col } from 'react-bootstrap';
-import axios from 'axios';
 
-const GetItem = () => {
-  const [repos, setRepos] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await axios(
-        'https://api.github.com/users/iamshaunjp/repos?per_page=6&sort=created:asc'
-      );
-
-      setRepos(res.data);
-    };
-
-    fetchData();
-  }, []);
-
+const GetItem = ({ repos }) => {
   return (
     <div>
       <Row>

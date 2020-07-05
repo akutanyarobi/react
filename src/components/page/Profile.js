@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import GetItem from './GetItem';
 import undrawLanding from '../assets/undraw-landing.png';
 import { Row, Col, Button } from 'react-bootstrap';
+import GithubContext from '../../context/github/GithubContext';
 
 const Profile = () => {
+  // const [text, setText] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const res = await axios.get(
+  //       'https://api.github.com/users/iamshaunjp/repos?per_page=6&sort=created:asc'
+  //     );
+
+  //     setText(res.data);
+  //   };
+
+  //   fetchData();
+  // }, []);
+
+  // console.log(text);
+
+  const githubContext = useContext(GithubContext);
+
+  const { repos } = githubContext;
+
   return (
     <div>
       <Row>
@@ -37,7 +58,7 @@ const Profile = () => {
           architecto deserunt aperiam?
         </h4>
       </Col>
-      <GetItem />
+      <GetItem repos={repos} />
     </div>
   );
 };
